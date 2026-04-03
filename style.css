@@ -27,3 +27,53 @@ textarea {
   height: 50%;
   margin-bottom: 10px;
 }
+
+td:last-child {
+  white-space: nowrap;
+}
+
+button {
+  margin: 2px;
+  font-size: 12px;
+  position: relative;
+}
+
+/* tooltip */
+button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #333;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+/* flechita */
+button::before {
+  content: "";
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: 5px solid transparent;
+  border-top-color: #333;
+
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+button:hover::after,
+button:hover::before {
+  opacity: 1;
+}
