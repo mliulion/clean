@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clean Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  
+  <!-- IZQUIERDA -->
+  <div class="left">
+    <table id="tabla">
+      <tbody>
+        <!-- 10 filas x 2 columnas -->
+        <script>
+          for (let i = 0; i < 10; i++) {
+            document.write("<tr>");
+            for (let j = 0; j < 2; j++) {
+              document.write(`<td><input type="text" class="cell"></td>`);
+            }
+            document.write("</tr>");
+          }
+        </script>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DERECHA -->
+  <div class="right">
+    <textarea id="textarea_input" placeholder="Input"></textarea>
+    <textarea id="textarea_output" placeholder="Output"></textarea>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
