@@ -89,7 +89,7 @@ function applyRegexReplacements(text, rules) {
 
   for (const { pattern, replacement } of rules) {
     try {
-      const regex = new RegExp(pattern, "g");
+      const regex = new RegExp(pattern, "ig");
 
       result = result.replace(regex, (...args) => {
         const match = args[0];
